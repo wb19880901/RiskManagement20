@@ -1,0 +1,39 @@
+{
+  "name": "RiskManagement20",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@cap-js/hana": "^3",
+    "@sap/cds": "^10"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^3"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "private": true,
+  "cds": {
+    "requires": {
+      "db": "sqlite",
+      "auth": {
+        "kind": "mocked",
+        "users": {
+          "alice": {
+            "password": "123",
+            "roles": [
+              "support"
+            ]
+          },
+          "bob": {
+            "password": "123",
+            "roles": [
+              "support"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+
